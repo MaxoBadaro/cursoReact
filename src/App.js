@@ -1,15 +1,13 @@
 import React from "react";
 import './App.css';
 import NavBar from './components/NavBar';
-import Componente from "./components/Componente";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
     <>
-    <NavBar />
-    <section>
-      <Componente msg="hola, me pasaron por una prop"/>
-    </section>
+    <NavBar/>
+    <ItemListContainer greeting="Holis" />
     </>
   );
 }

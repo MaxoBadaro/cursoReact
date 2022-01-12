@@ -1,29 +1,21 @@
 import React from "react";
+import { Navbar, Container, Nav} from 'react-bootstrap'
+import CartWidget from "./CartWidget";
 
 export default function NavBar (){
     return(
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">GODY</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Promociones</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contactanos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <Navbar bg="primary" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">Nombre</Navbar.Brand>
+                <Nav className="justify-content-end">
+                    <Nav.Link href="#home">Inicio</Nav.Link>
+                    <Nav.Link href="#home">Productos</Nav.Link>
+                    <Nav.Link href="#home">Contacto</Nav.Link>
+                </Nav>
+            </Container>
+            <CartWidget count="0"/>
+        </Navbar>
         </>
     )
 }
